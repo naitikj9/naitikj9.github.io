@@ -166,6 +166,15 @@ footer { position: relative; z-index: 2; text-align: center; color: var(--muted)
 .reveal.visible { opacity: 1; transform: none; }
 
 /* RESPONSIVE */
+@media (max-width: 1000px) {
+  .hero > *:not(.scroll-hint) { position: relative; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: radial-gradient(ellipse 90% 55% at 30% 45%, rgba(5, 5, 5, 0.82), transparent 75%);
+  }
+  .hero { position: relative; z-index: 0; }
+  .hero h1, .role, .lede { text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9); }
+}
 @media (max-width: 900px) {
   .projects { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }

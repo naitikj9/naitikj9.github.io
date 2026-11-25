@@ -199,7 +199,12 @@ function initScene() {
     camera.position.x = THREE.MathUtils.lerp(camera.position.x, targetX, 0.04);
     camera.position.y = THREE.MathUtils.lerp(camera.position.y, targetY, 0.04);
     camera.position.z = THREE.MathUtils.lerp(camera.position.z, 11 + scrollP * 6, 0.05);
-    world.position.x = THREE.MathUtils.lerp(world.position.x, isMobile ? 0 : baseX * (1 - Math.min(1, scrollP * 4)), 0.05);
+    // narrow screens: no room beside the text, so sink the network below the hero and shrink it
+    const narrow = window.innerWidth < 1000;
+    const heroK = 1 - Math.min(1, scrollP * 4);
+    world.position.x = THREE.MathUtils.lerp(world.position.x, narrow ? 0 : baseX * heroK, 0.05);
+    world.position.y = THREE.MathUtils.lerp(world.position.y, narrow ? -3.4 * heroK : 0, 0.05);
+    world.scale.setScalar(THREE.MathUtils.lerp(world.scale.x, narrow ? 0.72 : 1, 0.05));
     camera.lookAt(0, -scrollP * 2, 0);
 
     for (let i = 0; i < P; i++) {
