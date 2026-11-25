@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naitik Jain | Software Engineer, AI Agents</title>
+  <meta name="description" content="Naitik Jain builds LLM-powered agents, LLM evals, RAG pipelines and recommender systems." />
+  <meta property="og:title" content="Naitik Jain | Software Engineer, AI Agents" />
+  <meta property="og:description" content="LLM agents, evals, RAG and recommender systems, shipped to production." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a0a0a'/><text x='50%' y='56%' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='30' font-weight='700' fill='%23ffffff'>NJ</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=2" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="logo">NJ<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-small" href="Naitik_Jain_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow mono">// hello, world</p>
+      <h1>Naitik <span class="grad">Jain</span></h1>
+      <p class="role mono">I build <span id="typed" class="typed">LLM agents</span><span class="caret">_</span></p>
+      <p class="lede">Software engineer making AI agents reliable enough for production: evals, RAG, intent routing and
+        recommender systems, on Python and TypeScript/Node backends.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">See my work</a>
+        <a class="btn btn-ghost" href="https://github.com/naitikj9" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/naitikj9/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div class="scroll-hint mono">scroll</div>
+    </section>
+
+    <!-- STATS -->
+    <section id="about" class="section">
+      <h2 class="title"><span class="mono num">01.</span> About</h2>
+      <div class="about glass reveal">
+        <p>I'm an engineering intern on the <b>AI Agents</b> team at <b>Emergent Labs</b> and a Computer Science
+          student at <b>Scaler School of Technology</b> and <b>BITS Pilani</b>. I like the unglamorous part of AI:
+          tracing failures, building eval harnesses, and turning a demo that works sometimes into a system that works
+          every time.</p>
+        <p>Right now I'm looking to build AI agents and retrieval-driven matching and search systems that ship to
+          production and stay reliable at scale.</p>
+      </div>
+      <div class="stats">
+        <div class="stat glass reveal"><span class="big" data-count="94" data-suffix="%">0</span><span>agent success rate (from 71%)</span></div>
+        <div class="stat glass reveal"><span class="big" data-count="120" data-suffix="+">0</span><span>eval scenarios in the regression harness</span></div>
+        <div class="stat glass reveal"><span class="big" data-count="400" data-suffix="+">0</span><span>users on a campus app I shipped</span></div>
+        <div class="stat glass reveal"><span class="big" data-count="3415">0</span><span>films in my recommender's catalog</span></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="title"><span class="mono num">02.</span> Experience</h2>
+      <div class="timeline">
+        <article class="job glass reveal">
+          <div class="job-head">
+            <div>
+              <h3>Engineering Intern, AI Agents</h3>
+              <p class="org">Emergent Labs · Bangalore</p>
+            </div>
+            <span class="mono date">Nov 2024 – Present</span>
+          </div>
+          <ul>
+            <li>Raised agent successful-run rate from <b>71% to 94%</b> by instrumenting traces, isolating failure modes, and shipping fixes to prompting and control flow.</li>
+            <li>Developed an automated LLM-eval and regression harness (<b>120+ scenarios</b>) for non-deterministic agent output.</li>
+            <li>Designed an intent classifier to route requests to agent workflows, and built a <b>RAG pipeline</b> on OpenAI embeddings and MongoDB Atlas Vector Search for an infinite-chat feature.</li>
+            <li>Cut release validation from <b>3 days to under 6 hours</b> by automating engineering workflows, enabling daily shipping.</li>
+          </ul>
+          <div class="chips"><span>TypeScript</span><span>Python</span><span>LLM evals</span><span>RAG</span><span>OpenAI</span><span>MongoDB Atlas</span></div>
+        </article>
+        <article class="job glass reveal">
+          <div class="job-head">
+            <div>
+              <h3>Engineering Intern, Supply Chain</h3>
+              <p class="org">Tata 1mg · Bangalore</p>
+            </div>
+            <span class="mono date">Jan 2025 – Apr 2025</span>
+          </div>
+          <ul>
+            <li>Engineered the <b>end-to-end inbound (inwarding) flow</b> for incoming stock in Tata 1mg's supply-chain software, including database validations, used across its warehouses in India.</li>
+            <li>Delivered automated end-to-end and API test coverage in Selenium and Postman for <b>3 enterprise SCM epics</b>.</li>
+            <li>Automated a manual regression cycle, saving about <b>12 hours</b> of repeat effort per release.</li>
+          </ul>
+          <div class="chips"><span>Supply chain</span><span>Databases</span><span>Selenium</span><span>Postman</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="title"><span class="mono num">03.</span> Projects</h2>
+      <div class="projects">
+        <a class="project glass reveal tilt" href="https://github.com/naitikj9/movie-recommendation-system" target="_blank" rel="noopener">
+          <div class="p-top"><span class="mono tag">recommender</span><span class="arrow">↗</span></div>
+          <h3>AI Movie Recommender</h3>
+          <p>End-to-end Bollywood recommender over <b>3,415</b> Wikidata films. Personalized ranking by cosine
+            similarity on rating-weighted genre profiles, a hybrid score (<b>70%</b> preference, <b>30%</b> popularity),
+            group picks with least-misery aggregation, Docker and <b>7</b> unit-test suites.</p>
+          <div class="chips"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>scikit-learn</span><span>Docker</span></div>
+        </a>
+        <a class="project glass reveal tilt" href="https://github.com/naitikj9/Unimate" target="_blank" rel="noopener">
+          <div class="p-top"><span class="mono tag">mobile · real-time</span><span class="arrow">↗</span></div>
+          <h3>Unimate: Campus App</h3>
+          <p>Campus-wide mobile app (Buildspace S5) shipped to <b>400+ users</b>. Real-time messaging over WebSocket
+            with <b>sub-150 ms</b> delivery, push via Firebase Cloud Messaging, deployed on AWS behind Cloudflare CDN.</p>
+          <div class="chips"><span>React Native</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>AWS</span></div>
+        </a>
+        <a class="project glass reveal tilt" href="https://github.com/naitikj9/web-scrapper" target="_blank" rel="noopener">
+          <div class="p-top"><span class="mono tag">data pipeline</span><span class="arrow">↗</span></div>
+          <h3>Price Comparator</h3>
+          <p>Modular multi-source scraper comparing live prices across <b>Amazon and Flipkart</b> with pluggable
+            per-marketplace extractors, parsing <b>1000+ product pages</b> per run to surface the best price.</p>
+          <div class="chips"><span>Python</span><span>BeautifulSoup</span><span>Requests</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="title"><span class="mono num">04.</span> Skills</h2>
+      <div class="skills">
+        <div class="skill glass reveal"><h4 class="mono">AI &amp; LLMs</h4><div class="chips"><span>LLM agents</span><span>RAG pipelines</span><span>Embeddings</span><span>Vector search</span><span>LLM evals</span><span>Recommender systems</span></div></div>
+        <div class="skill glass reveal"><h4 class="mono">Languages</h4><div class="chips"><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>SQL</span><span>Java</span></div></div>
+        <div class="skill glass reveal"><h4 class="mono">Backend &amp; Data</h4><div class="chips"><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>WebSocket</span><span>MongoDB</span><span>Atlas Vector Search</span><span>Pandas</span><span>NumPy</span></div></div>
+        <div class="skill glass reveal"><h4 class="mono">Cloud &amp; Tools</h4><div class="chips"><span>Docker</span><span>AWS</span><span>Firebase</span><span>Cloudflare CDN</span><span>Git</span><span>CI</span><span>React</span><span>React Native</span></div></div>
+      </div>
+      <div class="edu glass reveal">
+        <div><h3>Scaler School of Technology</h3><p class="org">Undergraduate Program, Computer Science</p></div>
+        <span class="mono date">2023 – 2027</span>
+        <div><h3>BITS Pilani</h3><p class="org">B.Sc. (Hons.) Computer Science</p></div>
+        <span class="mono date">2023 – 2026</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="title"><span class="mono num">05.</span> Let's talk</h2>
+      <p class="lede">Building agents, search or recommendations? I'd love to hear about it.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:naitikjain921@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/naitikj9/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/naitikj9" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-ghost" href="Naitik_Jain_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mono">Built by Naitik Jain · Three.js · © <span id="year"></span></footer>
+
+  <script type="module" src="main.js?v=2"></script>
+</body>
+</html>
